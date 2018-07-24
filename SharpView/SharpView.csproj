@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22A156EA-2623-45C7-8E50-E864D9FC44D3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpView</RootNamespace>
+    <AssemblyName>SharpView</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SharpView.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PCRE.NET, Version=0.7.0.0, Culture=neutral, PublicKeyToken=8f58d558eeff25a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCRE.NET.0.7.0\lib\net45\PCRE.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arguments\Args_Export_PowerViewCSV.cs" />
+    <Compile Include="Arguments\Args_Find_DomainUserLocation.cs" />
+    <Compile Include="Arguments\Args_Find_DomainProcess.cs" />
+    <Compile Include="Arguments\Args_Find_DomainUserEvent.cs" />
+    <Compile Include="Arguments\Args_Find_DomainShare.cs" />
+    <Compile Include="Arguments\Args_Find_DomainLocalGroupMember.cs" />
+    <Compile Include="Arguments\Args_Find_InterestingDomainShareFile.cs" />
+    <Compile Include="Arguments\Args_Find_InterestingFile.cs" />
+    <Compile Include="Arguments\Args_Find_LocalAdminAccess.cs" />
+    <Compile Include="Arguments\Args_Find_DomainObjectPropertyOutlier.cs" />
+    <Compile Include="Arguments\Args_Invoke_Kerberoast.cs" />
+    <Compile Include="Arguments\Args_Set_DomainUserPassword.cs" />
+    <Compile Include="Arguments\Args_Add_DomainGroupMember.cs" />
+    <Compile Include="Arguments\Args_Get_PrincipalContext.cs" />
+    <Compile Include="Arguments\Args_New_DomainUser.cs" />
+    <Compile Include="Arguments\Args_New_DomainGroup.cs" />
+    <Compile Include="Arguments\Args_Find_InterestingDomainAcl.cs" />
+    <Compile Include="Arguments\Args_ConvertFrom_UACValue.cs" />
+    <Compile Include="Arguments\Args_Get_PathAcl.cs" />
+    <Compile Include="Arguments\Args_Get_NetSession.cs" />
+    <Compile Include="Arguments\Args_Get_NetLocalGroupMember.cs" />
+    <Compile Include="Arguments\Args_Get_NetLocalGroup.cs" />
+    <Compile Include="Arguments\Args_Get_NetLoggedon.cs" />
+    <Compile Include="Arguments\Args_Get_NetShare.cs" />
+    <Compile Include="Arguments\Args_Get_NetRDPSession.cs" />
+    <Compile Include="Arguments\Args_Get_WMIProcess.cs" />
+    <Compile Include="Arguments\Args_Get_WMIRegMountedDrive.cs" />
+    <Compile Include="Arguments\Args_Get_WMIRegProxy.cs" />
+    <Compile Include="Arguments\Args_Get_WMIRegLastLoggedOn.cs" />
+    <Compile Include="Arguments\Args_Get_WMIRegCachedRDPConnection.cs" />
+    <Compile Include="Arguments\Args_Test.cs" />
+    <Compile Include="Arguments\Args_Test_AdminAccess.cs" />
+    <Compile Include="Arguments\Args_Remove_DomainObjectAcl.cs" />
+    <Compile Include="Arguments\Args_Add_DomainObjectAcl.cs" />
+    <Compile Include="Arguments\Args_Get_DomainObjectAcl.cs" />
+    <Compile Include="Arguments\Args_Get_DomainGPOComputerLocalGroupMapping.cs" />
+    <Compile Include="Arguments\Args_Get_DomainGPOUserLocalGroupMapping.cs" />
+    <Compile Include="Arguments\Args_Get_DomainGPOLocalGroup.cs" />
+    <Compile Include="Arguments\Args_Get_DomainPolicyData.cs" />
+    <Compile Include="Arguments\Args_Get_GroupsXML.cs" />
+    <Compile Include="Arguments\Args_Get_IniContent.cs" />
+    <Compile Include="Arguments\Args_Remove_RemoteConnection.cs" />
+    <Compile Include="Arguments\Args_ConvertFrom_SID.cs" />
+    <Compile Include="Arguments\Args_Convert_ADName.cs" />
+    <Compile Include="Arguments\Args_Get_DomainDNSZone.cs" />
+    <Compile Include="Arguments\Args_Get_DomainDNSRecord.cs" />
+    <Compile Include="Arguments\Args_Get_DomainGPO.cs" />
+    <Compile Include="Arguments\Args_Get_DomainManagedSecurityGroup.cs" />
+    <Compile Include="Arguments\Args_Get_DomainGroupMember.cs" />
+    <Compile Include="Arguments\Args_Get_DomainForeignUser.cs" />
+    <Compile Include="Arguments\Args_Get_DomainForeignGroupMember.cs" />
+    <Compile Include="Arguments\Args_Get_DomainGroup.cs" />
+    <Compile Include="Arguments\Args_Get_DomainDFSShare.cs" />
+    <Compile Include="Arguments\Args_Add_RemoteConnection.cs" />
+    <Compile Include="Arguments\Args_Get_GptTmpl.cs" />
+    <Compile Include="Arguments\Args_Get_RegLoggedOn.cs" />
+    <Compile Include="Arguments\Args_Set_DomainObject.cs" />
+    <Compile Include="Arguments\Args_Get_DomainSubnet.cs" />
+    <Compile Include="Arguments\Args_Get_DomainSite.cs" />
+    <Compile Include="Arguments\Args_Get_DomainTrustMapping.cs" />
+    <Compile Include="Arguments\Args_Get_DomainTrust.cs" />
+    <Compile Include="Arguments\Args_Get_DomainGUIDMap.cs" />
+    <Compile Include="Arguments\Args_ConvertTo_SID.cs" />
+    <Compile Include="Arguments\Args_Get_DomainSPNTicket.cs" />
+    <Compile Include="Arguments\Args_Invoke_UserImpersonation.cs" />
+    <Compile Include="Arguments\Args_Get_NetComputerSiteName.cs" />
+    <Compile Include="Arguments\Args_Resolve_IPAddress.cs" />
+    <Compile Include="Arguments\Args_Get_Forest.cs" />
+    <Compile Include="Arguments\Args_Get_DomainSID.cs" />
+    <Compile Include="Arguments\Args_Get_DomainOU.cs" />
+    <Compile Include="Arguments\Args_Get_DomainUser.cs" />
+    <Compile Include="Arguments\Args_Get_DomainObject.cs" />
+    <Compile Include="Arguments\Args_Get_DomainFileServer.cs" />
+    <Compile Include="Arguments\Args_Get_DomainController.cs" />
+    <Compile Include="Arguments\Args_Get_DomainComputer.cs" />
+    <Compile Include="Arguments\Args_Get_DomainSearcher.cs" />
+    <Compile Include="Arguments\Args_Get_DomainUserEvent.cs" />
+    <Compile Include="Arguments\Args_Get_ForestGlobalCatalog.cs" />
+    <Compile Include="Arguments\Args_Get_ForestDomain.cs" />
+    <Compile Include="Enums\LogonType.cs" />
+    <Compile Include="Enums\ClassType.cs" />
+    <Compile Include="Enums\SPNTicketFormat.cs" />
+    <Compile Include="Enums\LocalGroupType.cs" />
+    <Compile Include="Enums\Rights.cs" />
+    <Compile Include="Enums\MethodType.cs" />
+    <Compile Include="Enums\StealthSource.cs" />
+    <Compile Include="Interfaces\IWinEvent.cs" />
+    <Compile Include="Returns\ACL.cs" />
+    <Compile Include="Returns\ApiDomainTrust.cs" />
+    <Compile Include="Interfaces\IDomainTrust.cs" />
+    <Compile Include="Returns\FileACL.cs" />
+    <Compile Include="Returns\FoundFile.cs" />
+    <Compile Include="Returns\PrincipalContextEx.cs" />
+    <Compile Include="Returns\PropertyOutlier.cs" />
+    <Compile Include="Returns\SessionInfo.cs" />
+    <Compile Include="Returns\LocalGroupMemberAPI.cs" />
+    <Compile Include="Returns\LocalGroupMemberWinNT.cs" />
+    <Compile Include="Returns\LocalGroupWinNT.cs" />
+    <Compile Include="Returns\LocalGroupAPI.cs" />
+    <Compile Include="Returns\RegMountedDrive.cs" />
+    <Compile Include="Returns\ComputerSite.cs" />
+    <Compile Include="Returns\DomainPolicyData.cs" />
+    <Compile Include="Returns\Filter.cs" />
+    <Compile Include="Returns\ForestEx.cs" />
+    <Compile Include="Returns\ComputerIPAddress.cs" />
+    <Compile Include="Returns\GPO.cs" />
+    <Compile Include="Returns\GPOComputerLocalGroupMember.cs" />
+    <Compile Include="Returns\GPOLocalGroupMapping.cs" />
+    <Compile Include="Returns\GPOGroup.cs" />
+    <Compile Include="Returns\GroupsXML.cs" />
+    <Compile Include="Returns\GptTmpl.cs" />
+    <Compile Include="Returns\LdapDomainTrust.cs" />
+    <Compile Include="Returns\ExplicitCredentialLogonEvent.cs" />
+    <Compile Include="Returns\LogonEvent.cs" />
+    <Compile Include="Returns\ManagedSecurityGroup.cs" />
+    <Compile Include="Returns\GroupMember.cs" />
+    <Compile Include="Returns\ForeignUser.cs" />
+    <Compile Include="Returns\ForeignGroupMember.cs" />
+    <Compile Include="Returns\DNSZone.cs" />
+    <Compile Include="PowerView.cs" />
+    <Compile Include="Arguments\Args_Get_Domain.cs" />
+    <Compile Include="Returns\DFSShare.cs" />
+    <Compile Include="Returns\DNSRecord.cs" />
+    <Compile Include="Returns\LDAPProperty.cs" />
+    <Compile Include="Returns\NetDomainTrust.cs" />
+    <Compile Include="Returns\RDPSessionInfo.cs" />
+    <Compile Include="Returns\AdminAccess.cs" />
+    <Compile Include="Returns\ProxySettings.cs" />
+    <Compile Include="Returns\LastLoggedOnUser.cs" />
+    <Compile Include="Returns\CachedRDPConnection.cs" />
+    <Compile Include="Returns\ResolvedSID.cs" />
+    <Compile Include="Returns\LoggedOnUserInfo.cs" />
+    <Compile Include="Returns\ShareInfo.cs" />
+    <Compile Include="Returns\UserLocation.cs" />
+    <Compile Include="Returns\UserProcess.cs" />
+    <Compile Include="Returns\RegLoggedOnUser.cs" />
+    <Compile Include="Returns\SPNTicket.cs" />
+    <Compile Include="Utils\ObjectDumper.cs" />
+    <Compile Include="Utils\NetworkCredentialConverter.cs" />
+    <Compile Include="Utils\PathExtension.cs" />
+    <Compile Include="Utils\ReflectionExtension.cs" />
+    <Compile Include="Utils\StringArrayConverter.cs" />
+    <Compile Include="Utils\StringExtension.cs" />
+    <Compile Include="Utils\TestConnection.cs" />
+    <Compile Include="Enums\DnsRecordType.cs" />
+    <Compile Include="Enums\TrustAttribute.cs" />
+    <Compile Include="Enums\GroupProperty.cs" />
+    <Compile Include="Enums\ManagerType.cs" />
+    <Compile Include="Enums\GroupType.cs" />
+    <Compile Include="Enums\SamAccountType.cs" />
+    <Compile Include="Enums\Version.cs" />
+    <Compile Include="Enums\GroupScope.cs" />
+    <Compile Include="Enums\ADSNameType.cs" />
+    <Compile Include="Enums\UACEnum.cs" />
+    <Compile Include="Utils\Logger.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\NativeMethods.cs" />
+    <Compile Include="Utils\RegexMatch.cs" />
+    <Compile Include="Utils\ResultPropertyValueCollectionExtension.cs" />
+    <Compile Include="Utils\TrustAttributeExtension.cs" />
+    <Compile Include="Utils\UACEnumExtension.cs" />
+    <Compile Include="Utils\ValidationExtension.cs" />
+    <Compile Include="Utils\WildcardMatch.cs" />
+    <Compile Include="Utils\WmiWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ActiveDs">
+      <Guid>{97D25DB0-0363-11CF-ABC4-02608C9E7553}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FodyWeavers.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Costura.Fody.3.1.0\build\Costura.Fody.targets" Condition="Exists('..\packages\Costura.Fody.3.1.0\build\Costura.Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Costura.Fody.3.1.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.3.1.0\build\Costura.Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Fody.3.1.3\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.3.1.3\build\Fody.targets'))" />
+  </Target>
+  <Import Project="..\packages\Fody.3.1.3\build\Fody.targets" Condition="Exists('..\packages\Fody.3.1.3\build\Fody.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
