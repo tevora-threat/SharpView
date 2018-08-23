@@ -25,6 +25,7 @@ namespace SharpView.Utils
                     IEnumerable<string> subDirs = Directory.EnumerateDirectories(rootPath);
                     foreach (string dir in subDirs)
                     {
+                        System.Console.WriteLine("Searching Directory: " + dir);
                         foundFiles = foundFiles.Concat(GetDirectoryFiles(dir, patternMatchs, searchOption)); // Add files in subdirectories recursively to the list
                     }
                 }
