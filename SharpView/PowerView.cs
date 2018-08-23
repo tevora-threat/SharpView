@@ -9223,6 +9223,7 @@ namespace SharpView
             {
                 if ((TargetPath.IsRegexMatch(@"\\\\.*\\.*")) && (args.Credential != null))
                 {
+
                     var HostComputer = new System.Uri(TargetPath).Host;
                     if (!MappedComputers[HostComputer])
                     {
@@ -9274,7 +9275,7 @@ namespace SharpView
                         {
                              owner = File.GetAccessControl(file).GetOwner(typeof(SecurityIdentifier)).Translate(typeof(System.Security.Principal.NTAccount)).Value;
                         }
-                        catch (UnauthorizedAccessException) {
+                        catch{
                              owner = "Access was Denied"; 
                         }
 
