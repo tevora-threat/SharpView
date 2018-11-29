@@ -427,7 +427,7 @@ namespace SharpView
                 Logger.Write_Warning($@"There is no method does match with '{methodName}'");
                 return;
             }
-            if(args[1].ToLower() == "-help" || args[1].ToLower() == "help")
+            if(args.Length > 1 && (args[1].ToLower() == "-help" || args[1].ToLower() == "help"))
             {
                 Logger.Write_Output(Environment.NewLine + GetMethodHelp(method));
                 Environment.Exit(0);
