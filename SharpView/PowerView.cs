@@ -5461,7 +5461,7 @@ namespace SharpView
                     TargetSIDs.AddRange(sid);
                 }
                 TargetObjectSID = TargetSIDs;
-                if (TargetSIDs != null)
+                if (TargetSIDs == null)
                 {
                     throw new Exception($@"[Get-DomainGPOUserLocalGroupMapping] Unable to retrieve SID for identity '{args.Identity}'");
                 }
