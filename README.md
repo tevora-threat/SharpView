@@ -140,7 +140,7 @@ Get-DomainGPOLocalGroup
 Get-NetGPOGroup
 ```
 
-Blog [Here](https://threat.tevora.com/a-sharpview-and-more-aggressor)
+Blog [Here](https://www.tevora.com/threat-blog/a-sharpview-and-more-aggressor/)
 Currently compiled for .NET 4.5.2 todo is support 3.0 (4.0 at minimum)
 
 ##### TODO
