@@ -6011,7 +6011,7 @@ namespace SharpView
                             break;
                         // allows for the modification of group membership
                         case Rights.WriteMembers:
-                            GUIDs.Add("bf9679c0 -0de6-11d0-a285-00aa003049e2");
+                            GUIDs.Add("bf9679c0-0de6-11d0-a285-00aa003049e2");
                             break;
                         // 'DS-Replication-Get-Changes' = 1131f6aa-9c07-11d1-f79f-00c04fc2dcd2
                         // 'DS-Replication-Get-Changes-All' = 1131f6ad-9c07-11d1-f79f-00c04fc2dcd2
